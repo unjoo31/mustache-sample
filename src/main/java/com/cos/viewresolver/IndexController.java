@@ -31,7 +31,7 @@ public class IndexController {
 				.phone("01022229999")
 				.build();
 		model.addAttribute("member", member);
-		
+		// => /viewresolver/src/main/resources/templates/modelData.mustache
 		return "modelData";
 	}
 	
@@ -54,12 +54,13 @@ public class IndexController {
 		members.add(member2);
 		model.addAttribute("members", members);
 		model.addAttribute("user", true);
-		
+		// => /viewresolver/src/main/resources/templates/modelArray.mustache
 		return "modelArray";
 	}
 	
 	@GetMapping("/layout")
 	public String layout() {
+		// => /viewresolver/src/main/resources/templates/layout.mustache
 		return "layout";
 	}
 	
