@@ -23,6 +23,7 @@ public class IndexController {
 		return "index";
 	}
 	
+	// 클래스 파일을 담았다
 	@GetMapping("/model/data")
 	public String modelData(Model model) { // DI하기
 		Member member = Member.builder()
@@ -31,6 +32,7 @@ public class IndexController {
 				.phone("01022229999")
 				.build();
 		model.addAttribute("member", member);
+
 		// => /viewresolver/src/main/resources/templates/modelData.mustache
 		return "modelData";
 	}
@@ -54,6 +56,7 @@ public class IndexController {
 		members.add(member2);
 		model.addAttribute("members", members);
 		model.addAttribute("user", true);
+		
 		// => /viewresolver/src/main/resources/templates/modelArray.mustache
 		return "modelArray";
 	}
